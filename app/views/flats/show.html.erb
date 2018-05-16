@@ -1,0 +1,17 @@
+
+<div class="container"><h1><%= @flat.name %></h1>
+  <div>
+    <h3><%= @flat.address %></h3>
+  </div>
+  <div>
+   <h3><%= @flat.description %></h3>
+  </div>
+  <div>
+    <div><i class="fas fa-pound-sign"></i> <%= @flat.price_per_night %></div>
+  </div>
+  <br>
+   <div>
+    <div><i class="fas fa-user-friends"></i> <%= @flat.number_of_guests %> guest(s)</div>
+  </div>
+</div>
+<%= link_to 'Flats Homepage', flats_path %>

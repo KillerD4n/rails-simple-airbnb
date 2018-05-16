@@ -1,0 +1,18 @@
+
+<h1>AirBnB Flats</h1>
+
+    <div class="cards">
+  <% @flats.each do |flat| %>
+    <div class="card">
+      <div class="name">
+        <%= flat.name %>
+      </div>
+      <div class="info">
+        <%= flat.address %> - <%= flat.description %> - <div><i class="fas fa-pound-sign"></i> <%= flat.price_per_night %></div> <div><i class="fas fa-user-friends"></i> <%= flat.number_of_guests %> guest(s)</div>
+        <br>
+        <div class="links"><%= link_to 'more info', flat_path(flat) %><br> <%= link_to 'edit flat', edit_flat_path(flat) %> <br><%= link_to 'Remove flat', flat_path(flat), method: :delete %></div>
+    </div>
+  </div>
+  <% end %>
+
+</div>
